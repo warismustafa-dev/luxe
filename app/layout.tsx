@@ -1,6 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter, Anton, Playfair_Display, Public_Sans } from 'next/font/google';
+import { getMediaUrl } from '@/lib/utils';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const anton = Anton({ subsets: ['latin'], weight: '400', variable: '--font-anton' });
@@ -22,9 +23,9 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${anton.variable} ${playfair.variable} ${publicsans.variable}`}>
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Poltawski+Nowy:wght@400;700&display=swap" rel="stylesheet" />
-        <link rel="icon" href="/assets/images/Header-2-Logo.svg" type="image/svg+xml" />
-        <meta property="og:image" content="/assets/images/Logo-big.svg" />
-        <meta name="twitter:image" content="/assets/images/Logo-big.svg" />
+        <link rel="icon" href={getMediaUrl("/assets/images/Header-2-Logo.svg")} type="image/svg+xml" />
+        <meta property="og:image" content={getMediaUrl("/assets/images/Logo-big.svg")} />
+        <meta name="twitter:image" content={getMediaUrl("/assets/images/Logo-big.svg")} />
       </head>
       <body>
         <main className="min-h-screen">

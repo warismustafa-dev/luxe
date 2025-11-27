@@ -2,20 +2,21 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import routes from "@/lib/routes";
+import { getMediaUrl } from '@/lib/utils';
 
 // Video mapping for activities
 const activityVideoMap: Record<string, { desktop: string; mobile: string }> = {
   'sunset-stargazing': {
-    desktop: '/assets/videos/Tenerife Stars 16-9 - Final Video.mp4',
-    mobile: '/assets/videos/Tenerife Stars 9-16 - Final Video.mp4',
+    desktop: getMediaUrl('/assets/videos/Tenerife Stars 16-9 - Final Video.mp4'),
+    mobile: getMediaUrl('/assets/videos/Tenerife Stars 9-16 - Final Video.mp4'),
   },
   'jet-ski': {
-    desktop: '/assets/videos/Extreme Jet Ski 16-9 - Final Video.mp4',
-    mobile: '/assets/videos/Extreme Jet Ski 9-16 - Final Video.mp4',
+    desktop: getMediaUrl('/assets/videos/Extreme Jet Ski 16-9 - Final Video.mp4'),
+    mobile: getMediaUrl('/assets/videos/Extreme Jet Ski 9-16 - Final Video.mp4'),
   },
   'buggy': {
-    desktop: '/assets/videos/King Buggy 16-9 - Final Video.mp4',
-    mobile: '/assets/videos/King Buggy 9-16 - Final Video.mp4',
+    desktop: getMediaUrl('/assets/videos/King Buggy 16-9 - Final Video.mp4'),
+    mobile: getMediaUrl('/assets/videos/King Buggy 9-16 - Final Video.mp4'),
   },
 };
 
@@ -376,15 +377,27 @@ export default function OfferingsPage() {
       {/* Hero Section with Video */}
       <section className="w-full container-padding mt-20">
         <div className="relative h-[320px] md:h-[420px] rounded-luxe-xl overflow-hidden">
+          {/* Desktop Video (16:9) */}
           <video
             autoPlay
             loop
             muted
             playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-            poster="/assets/images/Excursion-Hero-Img.png"
+            className="hidden md:block absolute inset-0 w-full h-full object-cover"
+            poster={getMediaUrl("/assets/images/Excursion-Hero-Img.png")}
           >
-            <source src="/assets/videos/Beauty of Tenerife 16-9 - Final Video.mp4" type="video/mp4" />
+            <source src={getMediaUrl("/assets/videos/Beauty of Tenerife 16-9 - Final Video.mp4")} type="video/mp4" />
+          </video>
+          {/* Mobile Video (9:16) */}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="md:hidden absolute inset-0 w-full h-full object-cover"
+            poster={getMediaUrl("/assets/images/Excursion-Hero-Img.png")}
+          >
+            <source src={getMediaUrl("/assets/videos/Beauty of Tenerife 9-16 - Final Video.mp4")} type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-black/40"></div>
           <div className="relative z-10 flex flex-col items-center gap-4 max-w-[1160px] w-full mx-auto h-full justify-center px-4">

@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
+import { getMediaUrl } from '@/lib/utils';
 
 const Footer = () => {
   return (
@@ -11,18 +12,18 @@ const Footer = () => {
         <div className="flex justify-between items-center mb-12">
           <div className="flex items-center">
             <span className="text-2xl font-bold bg-gradient-to-r from-amber-600 to-yellow-500 bg-clip-text text-transparent">
-              <img src="/assets/images/Header-2-Logo.svg" alt="alt" className="w-[60px] h-[52px]" />
+              <img src={getMediaUrl("/assets/images/Header-2-Logo.svg")} alt="alt" className="w-[60px] h-[52px]" />
             </span>
           </div>
           <div className="flex items-center space-x-4">
             <Link href="#" className="text-white hover:text-luxe-gold transition-colors">
-              <img src="assets/images/Facebook 2.svg" alt="fb" />
+              <img src={getMediaUrl("/assets/images/Facebook 2.svg")} alt="fb" />
             </Link>
             <Link href="#" className="text-white hover:text-luxe-gold transition-colors">
-              <img src="assets/images/instax.svg" alt="fb" />
+              <img src={getMediaUrl("/assets/images/instax.svg")} alt="fb" />
             </Link>
             <Link href="#" className="text-white hover:text-luxe-gold transition-colors">
-              <img src="assets/images/Twitter 2.svg" alt="fb" />
+              <img src={getMediaUrl("/assets/images/Twitter 2.svg")} alt="fb" />
             </Link>
           </div>
         </div>
@@ -77,15 +78,15 @@ const Footer = () => {
             <h3 className="luxe-heading-3 text-white text-left mb-4">Contact</h3>
             <ul className="space-y-3 text-lg break-words">
               <li className="flex items-center text-white/90 luxe-text-body">
-                <span className="inline-block mr-2 text-[#E0C469] flex-shrink-0"><img src="/assets/images/Phone.svg" alt="phone" /></span>
+                <span className="inline-block mr-2 text-[#E0C469] flex-shrink-0"><img src={getMediaUrl("/assets/images/Phone.svg")} alt="phone" /></span>
                 <a href="tel:+34722645670" className="hover:text-luxe-gold transition">+34 722 645 670</a>
               </li>
               <li className="flex items-center text-white/90 luxe-text-body">
-                <span className="inline-block mr-2 text-luxe-gold flex-shrink-0"><img src="/assets/images/Mail.svg" alt="mail" /></span>
+                <span className="inline-block mr-2 text-luxe-gold flex-shrink-0"><img src={getMediaUrl("/assets/images/Mail.svg")} alt="mail" /></span>
                 <a href="mailto:luxeexcursionstenerife@gmail.com" className="hover:text-luxe-gold transition">luxeexcursionstenerife@gmail.com</a>
               </li>
               <li className="flex items-center text-white/90 luxe-text-body">
-                <span className="inline-block mr-2 text-luxe-gold flex-shrink-0"><img src="/assets/images/Location-Filled.svg" alt="location" /></span>
+                <span className="inline-block mr-2 text-luxe-gold flex-shrink-0"><img src={getMediaUrl("/assets/images/Location-Filled.svg")} alt="location" /></span>
                 <a href="https://maps.app.goo.gl/LGDs3Sck8Mv9CtAKA" target="_blank" rel="noopener noreferrer" className="hover:text-luxe-gold transition">8460 Rockville Ave. Greenville, NC 27834</a>
               </li>
             </ul>

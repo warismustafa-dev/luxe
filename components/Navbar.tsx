@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { getMediaUrl } from '@/lib/utils';
 
 interface NavbarProps {
   theme?: 'light' | 'dark';
@@ -35,7 +36,7 @@ const Navbar = ({ theme = 'dark', backgroundColor }: NavbarProps) => {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <span className="text-2xl font-bold bg-gradient-to-r from-amber-600 to-yellow-500 bg-clip-text text-transparent">
-              <img src="/assets/images/Header-2-Logo.svg" alt="alt" />
+              <img src={getMediaUrl("/assets/images/Header-2-Logo.svg")} alt="alt" />
             </span>
           </Link>
 

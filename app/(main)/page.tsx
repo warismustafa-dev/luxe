@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import TestimonialSlider from '@/components/home/TestimonialSlider';
 import ExcursionBanner from '@/components/home/ExcursionBanner';
+import { getMediaUrl } from '@/lib/utils';
 
 export default function HomePage() {
   return (
@@ -14,9 +15,9 @@ export default function HomePage() {
           muted
           playsInline
           className="hidden md:block absolute inset-0 w-full h-full object-cover"
-          poster="/assets/images/hero-image.svg"
+          poster={getMediaUrl("/assets/images/hero-image.svg")}
         >
-          <source src="/assets/videos/Luxe Excursions Tenerife (Introduction) 2-39 4K - Final Video.mp4" type="video/mp4" />
+          <source src={getMediaUrl("/assets/videos/Luxe Excursions Tenerife (Introduction) 2-39 4K - Final Video.mp4")} type="video/mp4" />
         </video>
         {/* Mobile Video (9:16) */}
         <video
@@ -25,16 +26,16 @@ export default function HomePage() {
           muted
           playsInline
           className="md:hidden absolute inset-0 w-full h-full object-cover"
-          poster="/assets/images/hero-image.svg"
+          poster={getMediaUrl("/assets/images/hero-image.svg")}
         >
-          <source src="/assets/videos/Luxe Excursions Tenerife (Introduction) 9-16 - Final Video.mp4" type="video/mp4" />
+          <source src={getMediaUrl("/assets/videos/Luxe Excursions Tenerife (Introduction) 9-16 - Final Video.mp4")} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/30"></div>
 
         {/* Hero Content */}
         <div className="relative z-10 flex items-center justify-center h-full">
           <div className="text-center mx-auto px-4 md:px-20">
-            <img src="/assets/images/Logo-big.svg" alt="Luxe Excursions Tenerife" className='w-[180px] h-[154px] md:w-[240px] md:h-[206px] mx-auto' />
+            <img src={getMediaUrl("/assets/images/Logo-big.svg")} alt="Luxe Excursions Tenerife" className='w-[180px] h-[154px] md:w-[240px] md:h-[206px] mx-auto' />
           </div>
         </div>
       </section>
@@ -54,7 +55,7 @@ export default function HomePage() {
             {/* Experiences Card */}
             <Link href="/experiences" className="group relative lg:h-[587px] md:h-auto rounded-luxe-2xl overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105">
               <img
-                src="/assets/images/private-tour.jpg"
+                src={getMediaUrl("/assets/images/private-tour.jpg")}
                 alt="Experience Packages"
                 className="w-full h-full object-cover"
               />
@@ -73,7 +74,7 @@ export default function HomePage() {
             {/* Premium Rentals Card */}
             <Link href="/offerings#rentals" className="group relative lg:h-[587px] md:h-auto rounded-luxe-2xl overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105">
               <img
-                src="/assets/images/premium-rentals.jpg"
+                src={getMediaUrl("/assets/images/premium-rentals.jpg")}
                 alt="Premium Rentals"
                 className="w-full h-full object-cover"
               />
@@ -93,7 +94,7 @@ export default function HomePage() {
             <div className="flex flex-col gap-4 lg:h-[587px] md:h-auto">
               <Link href="/offerings#activities" className="group relative flex-1 rounded-luxe-2xl overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105">
                 <img
-                  src="/assets/images/adventure-activities.jpg"
+                  src={getMediaUrl("/assets/images/adventure-activities.jpg")}
                   alt="Adventure Activities"
                   className="w-full h-full object-cover"
                 />
@@ -111,7 +112,7 @@ export default function HomePage() {
 
               <Link href="/offerings#activities" className="group relative flex-1 rounded-luxe-2xl overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105">
                 <img
-                  src="/assets/images/snow-mountain.jpg"
+                  src={getMediaUrl("/assets/images/snow-mountain.jpg")}
                   alt="Water Sports"
                   className="w-full h-full object-cover"
                 />
@@ -131,7 +132,7 @@ export default function HomePage() {
             {/* Exclusive Parties Card */}
             <Link href="/offerings#events" className="group relative lg:h-[587px] md:h-auto rounded-luxe-2xl overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105">
               <img
-                src="/assets/images/exclusive-parties.jpg"
+                src={getMediaUrl("/assets/images/exclusive-parties.jpg")}
                 alt="Exclusive Parties"
                 className="w-full h-full object-cover"
               />
@@ -172,7 +173,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-4">
             {/* Diamond Experience - Compact */}
             <div className="group relative overflow-hidden rounded-luxe-2xl shadow-lg h-[300px] md:h-[350px] lg:h-[400px]" style={{
-            backgroundImage: "url('/assets/images/Destination.png')"
+            backgroundImage: `url('${getMediaUrl("/assets/images/Destination.png")}')`
           }}>
             <div className="absolute inset-0 bg-black/40"></div>
               <div className="absolute inset-0 flex items-center justify-center lg:items-end lg:justify-end">
@@ -191,7 +192,7 @@ export default function HomePage() {
             {/* Gold Experience - Same height as Diamond */}
             <div className="group relative overflow-hidden rounded-luxe-2xl shadow-lg h-[300px] md:h-[350px] lg:h-[400px]">
               <img
-                src="/assets/images/Destination2.jpg"
+                src={getMediaUrl("/assets/images/Destination2.jpg")}
                 alt="Gold Experience"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
@@ -211,7 +212,7 @@ export default function HomePage() {
             {/* Custom Experience */}
             <div className="group relative overflow-hidden rounded-luxe-2xl shadow-lg h-[250px] md:h-[280px] lg:h-[300px]">
                 <img
-                  src="/assets/images/destination3.jpg"
+                  src={getMediaUrl("/assets/images/destination3.jpg")}
                 alt="Custom Experience"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
@@ -226,7 +227,7 @@ export default function HomePage() {
             {/* Party Experience */}
             <div className="group relative overflow-hidden rounded-luxe-2xl shadow-lg h-[250px] md:h-[280px] lg:h-[300px]">
                 <img
-                  src="/assets/images/destination4.jpg"
+                  src={getMediaUrl("/assets/images/destination4.jpg")}
                 alt="Party Experience"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
