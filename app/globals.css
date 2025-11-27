@@ -1,0 +1,231 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+}
+
+/* Design System Variables */
+:root {
+  --section-padding: 4rem; /* 64px */
+  --container-padding: 1rem; /* 16px */
+  --section-gap: 2rem; /* 32px */
+}
+
+@media (min-width: 768px) {
+  :root {
+    --section-padding: 5rem; /* 80px */
+    --container-padding: 2rem; /* 32px */
+    --section-gap: 3rem; /* 48px */
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --section-padding: 6rem; /* 96px */
+    --container-padding: 5rem; /* 80px */
+  }
+}
+
+/* Utility Classes */
+@layer utilities {
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  .container-padding {
+    @apply px-4 md:px-8 lg:px-20;
+  }
+
+  .section-gap {
+    @apply gap-8 md:gap-12;
+  }
+
+  /* Button Styles */
+  .luxe-button-primary {
+    @apply bg-luxe-gold hover:bg-luxe-gold-dark text-black font-medium px-6 py-3 md:px-8 md:py-4 rounded-luxe-lg transition-colors duration-300;
+  }
+
+  .luxe-button-secondary {
+    @apply bg-transparent border-2 border-luxe-gold text-luxe-gold hover:bg-luxe-gold hover:text-black font-medium px-6 py-3 md:px-8 md:py-4 rounded-luxe-lg transition-colors duration-300;
+  }
+
+  .luxe-button-outline {
+    @apply border border-luxe-gray-dark text-luxe-gray-dark hover:bg-luxe-gray-dark hover:text-white font-medium px-6 py-3 md:px-8 md:py-4 rounded-luxe-lg transition-colors duration-300;
+  }
+
+  /* Card Styles */
+  .luxe-card {
+    @apply bg-white border border-gray-200 rounded-luxe-lg shadow-lg p-6 md:p-8;
+  }
+
+  .luxe-card-elevated {
+    @apply bg-white border border-gray-200 rounded-luxe-lg shadow-xl p-6 md:p-8;
+  }
+
+  .luxe-card-dark {
+    @apply bg-luxe-black border border-luxe-gray-light rounded-luxe-lg p-6 md:p-8;
+  }
+
+  /* Typography Styles */
+  .luxe-heading-display {
+    @apply font-anton text-4xl md:text-5xl lg:text-[64px] font-normal leading-tight tracking-normal;
+  }
+
+  .luxe-heading-1 {
+    @apply font-anton text-3xl md:text-4xl lg:text-5xl font-normal leading-tight tracking-normal;
+  }
+
+  .luxe-heading-2 {
+    @apply font-anton text-2xl md:text-3xl lg:text-4xl font-normal leading-tight tracking-normal;
+  }
+
+  .luxe-heading-3 {
+    @apply font-anton text-xl md:text-2xl lg:text-3xl font-normal leading-tight tracking-normal;
+  }
+
+  .luxe-text-body {
+    @apply font-inter text-base leading-normal;
+  }
+
+  .luxe-text-body-large {
+    @apply font-inter text-lg leading-relaxed;
+  }
+
+  .luxe-text-body-small {
+    @apply font-inter text-sm leading-normal;
+  }
+
+  .luxe-text-accent {
+    @apply font-inter text-base;
+  }
+}
+
+/* .description section of experiences */
+.description ul,
+.description ol {
+  background: #fff;
+  border: 4px solid #E0C469;
+  border-radius: 1rem;
+  padding: 1.25rem 1.5rem 1.25rem 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 2px 12px 0 rgba(224,196,105,0.07);
+  list-style: none;
+  columns: 3;
+  column-gap: 2.5rem;
+}
+
+@media (max-width: 700px) {
+  .description ul,
+  .description ol {
+    columns: 1;
+  }
+}
+
+.description li {
+  margin-bottom: 0.7rem;
+  padding-left: 0.2rem;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: #3d2c02;
+  font-size: 1.08rem;
+  position: relative;
+  transition: background 0.2s;
+  border-radius: 0.5rem;
+}
+
+.description li:last-child {
+  margin-bottom: 0;
+}
+
+.description li::before {
+  content: '';
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  margin-right: 0.9em;
+  background: #E0C469;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(224,196,105,0.15);
+}
+
+.description li:hover {
+  background: #fffbe8;
+}
