@@ -1,44 +1,45 @@
 import React, { useState } from 'react';
+import { getMediaUrl } from "@/lib/utils";
 
 const experiences = [
   {
     id: 1,
-    image: "/assets/images/Private-tour-norway.jpg",
+    image: getMediaUrl("/assets/images/Private-tour-norway.jpg"),
     title: "NORWEGIAN FJORD KAYAKING",
     description: "Paddle through the serene waters of Norway&apos;s stunning fjords, surrounded by towering cliffs and pristine wilderness.",
     price: 80
   },
   {
     id: 2,
-    image: "/assets/images/Private-tour-costa-rica.jpg",
+    image: getMediaUrl("/assets/images/Private-tour-costa-rica.jpg"),
     title: "COSTA RICAN RAINFOREST ZIPLINE",
     description: "Soar above the lush canopy of the Costa Rican rainforest on a thrilling zipline adventure.",
     price: 120
   },
   {
     id: 3,
-    image: "/assets/images/Private-tour-newzeland.jpg",
+    image: getMediaUrl("/assets/images/Private-tour-newzeland.jpg"),
     title: "NEW ZEALAND LORD OF THE RINGS",
     description: "Explore the breathtaking landscapes of New Zealand that served as the backdrop for the epic film trilogy.",
     price: 90
   },
   {
     id: 4,
-    image: "/assets/images/Private-tour-morocco.jpg",
+    image: getMediaUrl("/assets/images/Private-tour-morocco.jpg"),
     title: "MOROCCAN SAHARA DESERT",
     description: "Experience the magic of the Sahara Desert with a guided camel trek. Spend the night under the stars in a traditional Berber camp.",
     price: 120
   },
   {
     id: 5,
-    image: "/assets/images/Private-tour-japan.jpg",
+    image: getMediaUrl("/assets/images/Private-tour-japan.jpg"),
     title: "JAPANESE ONSEN RETREAT",
     description: "Relax and rejuvenate in a traditional Japanese onsen (hot spring) and stay in a ryokan for an authentic cultural experience.",
     price: 120
   },
   {
     id: 6,
-    image: "/assets/images/Private-tour-iceland.jpg",
+    image: getMediaUrl("/assets/images/Private-tour-iceland.jpg"),
     title: "ICELAND NORTHERN LIGHTS",
     description: "Chase the elusive Northern Lights in the rugged landscapes of Iceland. This magical experience includes warm accommodations.",
     price: 90
@@ -48,42 +49,42 @@ const experiences = [
 const placeholderExperiences = [
   {
     id: 1,
-    image: "/assets/images/Private-tour-iceland.jpg",
+    image: getMediaUrl("/assets/images/Private-tour-iceland.jpg"),
     title: "PLACEHOLDER EXPERIENCE 1",
     description: "This is a placeholder description for experience 1.",
     price: 100
   },
   {
     id: 2,
-    image: "/assets/images/Private-tour-japan.jpg",
+    image: getMediaUrl("/assets/images/Private-tour-japan.jpg"),
     title: "PLACEHOLDER EXPERIENCE 2",
     description: "This is a placeholder description for experience 2.",
     price: 110
   },
   {
     id: 3,
-    image: "/assets/images/Private-tour-morocco.jpg",
+    image: getMediaUrl("/assets/images/Private-tour-morocco.jpg"),
     title: "PLACEHOLDER EXPERIENCE 3",
     description: "This is a placeholder description for experience 3.",
     price: 120
   },
   {
     id: 4,
-    image: "/assets/images/Private-tour-newzeland.jpg",
+    image: getMediaUrl("/assets/images/Private-tour-newzeland.jpg"),
     title: "PLACEHOLDER EXPERIENCE 4",
     description: "This is a placeholder description for experience 4.",
     price: 130
   },
   {
     id: 5,
-    image: "/assets/images/Private-tour-costa-rica.jpg",
+    image: getMediaUrl("/assets/images/Private-tour-costa-rica.jpg"),
     title: "PLACEHOLDER EXPERIENCE 5",
     description: "This is a placeholder description for experience 5.",
     price: 140
   },
   {
     id: 6,
-    image: "/assets/images/Private-tour-norway.jpg",
+    image: getMediaUrl("/assets/images/Private-tour-norway.jpg"),
     title: "PLACEHOLDER EXPERIENCE 6",
     description: "This is a placeholder description for experience 6.",
     price: 150

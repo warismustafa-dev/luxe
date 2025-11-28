@@ -1,20 +1,21 @@
+import { getMediaUrl } from "@/lib/utils";
 
 const TeamSection = () => {
   const team = [
     {
       name: "Emma Rose",
       role: "Founder & CEO",
-      image: "/assets/images/Ema-Rose.svg"
+      image: getMediaUrl("/assets/images/Ema-Rose.svg")
     },
     {
       name: "Alexander David",
       role: "Head of Operations",
-      image: "/assets/images/A-David.svg"
+      image: getMediaUrl("/assets/images/A-David.svg")
     },
     {
       name: "Amelia Jane",
       role: "Experience Director",
-      image: "/assets/images/Amelia-jane.svg"
+      image: getMediaUrl("/assets/images/Amelia-jane.svg")
     }
   ];
 

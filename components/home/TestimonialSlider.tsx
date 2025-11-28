@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { getMediaUrl } from "@/lib/utils";
 
 const TestimonialSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -11,7 +12,7 @@ const TestimonialSlider = () => {
       name: "Emily, Solo Traveler",
       review:
         "As a solo traveler, I felt completely taken care of by Wanderlust. Their recommendations were spot-on, and I never felt alone thanks to the wonderful guides and group tours they arranged. Highly recommended!",
-      image: "/assets/images/emily-solo-travler.jpg",
+      image: getMediaUrl("/assets/images/emily-solo-travler.jpg"),
     },
     {
       name: "Marcus Williams",
@@ -38,7 +39,7 @@ const TestimonialSlider = () => {
       className="lg:py-[100px] md:py-12 py-10 relative bg-cover bg-center bg-black mt-[100px]"
       style={{
         backgroundImage:
-          "url('/assets/images/8f19f92f-76c2-404f-9524-6d9ffbc40f0e.png')",
+          `url('${getMediaUrl("/assets/images/8f19f92f-76c2-404f-9524-6d9ffbc40f0e.png")}')`,
       }}
     >
       <div className="absolute inset-0 bg-black/80"></div>
@@ -52,7 +53,7 @@ const TestimonialSlider = () => {
               className="w-full h-full object-cover scale-x-[-1]"
               onError={(e) => {
                 e.currentTarget.src =
-                  "/assets/images/emily-solo-travler.jpg";
+                  getMediaUrl("/assets/images/emily-solo-travler.jpg");
               }}
             />
           </div>

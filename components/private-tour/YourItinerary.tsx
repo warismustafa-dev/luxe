@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '../ui/button';
+import { getMediaUrl } from "@/lib/utils";
 
 const itinerary = [
   {
@@ -18,7 +19,7 @@ const itinerary = [
         text: 'Kick off your holiday with dinner at a local restaurant, where you can savour traditional Canarian cuisine while soaking in the vibrant atmosphere of Tenerife. We can advice and book a list of high end restaurants and can provide transfers.'
       }
     ],
-    image: '/assets/images/Itinerary.svg',
+    image: getMediaUrl('/assets/images/Itinerary.svg'),
     date: 'Day 1: Mon, 8 August 2024'
   },
   { title: 'Private Yacht Charter' },
@@ -45,7 +46,7 @@ const YourItinerary = () => {
               <span className={idx === 0 ? 'font-bold flex-grow text-left' : 'font-normal flex-grow text-left'}>
                 {idx + 1}. {step.title}
               </span>
-              <img src="/assets/images/Arrow-up.svg" alt="Arrow-up" />
+              <img src={getMediaUrl("/assets/images/Arrow-up.svg")} alt="Arrow-up" />
             </Button>
           ))}
         </div>
@@ -61,7 +62,7 @@ const YourItinerary = () => {
         <div className="flex flex-col items-start xl:w-[448px] w-full h-auto xl:h-[514px] gap-[77px]">
           <div className="flex flex-col gap-[20px] w-full">
             <span className="flex flex-row items-center px-[20px] py-[8px] gap-[8px] w-[242px] h-[40px] bg-gray-100 rounded-luxe-md text-sm luxe-text-accent font-medium text-luxe-gray-dark mb-0">
-              <img src="/assets/images/Calender-grey.svg" alt="" />
+              <img src={getMediaUrl("/assets/images/Calender-grey.svg")} alt="" />
               {itinerary[0]?.date ?? ""}
             </span>
             {itinerary[0]?.details?.map((section, idx) => (

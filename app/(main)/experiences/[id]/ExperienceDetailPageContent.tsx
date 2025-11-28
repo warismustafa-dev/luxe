@@ -11,6 +11,7 @@ import { Calendar } from '@/components/ui/calendar';
 import { staticExperiences } from '@/components/experiences/static-experiences';
 import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { CheckCircle, CalendarDays, Clock } from 'lucide-react';
+import { getMediaUrl } from '@/lib/utils';
 
 
 
@@ -108,7 +109,7 @@ const ExperienceDetailPageContent: React.FC<ExperienceDetailProps> = ({ experien
           </h1>
           <div className="flex items-center text-white/90 text-base mb-2">
             <span className="mr-2">
-              <img src="/assets/images/Location-Filled.svg" alt="location" />
+              <img src={getMediaUrl("/assets/images/Location-Filled.svg")} alt="location" />
             </span>
             <span>{experience.location}</span>
           </div>

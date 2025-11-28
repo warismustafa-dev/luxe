@@ -3,10 +3,11 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { getMediaUrl } from "@/lib/utils";
 
 const ExcursionBanner = () => (
   <section className="section-padding text-white relative bg-cover bg-center mx-4 md:mx-8 lg:mx-[60px] mt-24 rounded-luxe-xl" style={{
-    backgroundImage: "url('/assets/images/our-excursion-image.png')"
+    backgroundImage: `url('${getMediaUrl("/assets/images/our-excursion-image.png")}')`
   }}>
     <div className="absolute inset-0 bg-black/50 rounded-luxe-xl"></div>
     <div className="relative z-10 xl:max-w-7xl max-w-auto mx-auto text-center container-padding">

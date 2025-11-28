@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import { getMediaUrl } from "@/lib/utils";
 
 const ExperienceOverview = () => {
   const features = [
@@ -19,7 +20,7 @@ const ExperienceOverview = () => {
           <div className="relative">
             <div className="relative h-[300px] sm:h-[400px] md:h-[500px] rounded-luxe-xl overflow-hidden">
               <img 
-                src="/assets/images/Illustration.svg" 
+                src={getMediaUrl("/assets/images/Illustration.svg")} 
                 alt="Mountain landscape" 
                 className="w-full h-full object-cover"
               />
@@ -40,7 +41,7 @@ const ExperienceOverview = () => {
             <div className="grid grid-cols-2 gap-4 my-8">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-center space-x-2">
-                  <img src="/assets/images/Private-tour-white-tick.svg" alt="" />
+                  <img src={getMediaUrl("/assets/images/Private-tour-white-tick.svg")} alt="" />
                   <span className="luxe-text-body-small font-medium text-white">{feature}</span>
                 </div>
               ))}
@@ -48,7 +49,7 @@ const ExperienceOverview = () => {
             
             <Button variant="luxe" className="px-8 py-3 flex items-center gap-2">
               Book Now
-              <img src="/assets/images/Arrow-up.svg" alt="arrow-up" />
+              <img src={getMediaUrl("/assets/images/Arrow-up.svg")} alt="arrow-up" />
             </Button>
           </div>
         </div>

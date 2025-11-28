@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
+import { getMediaUrl } from "@/lib/utils";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -141,7 +142,7 @@ const Contact = () => {
               <Card className="border xl:max-h-[91px] max-h-fit border-gray-200 rounded-luxe-lg overflow-hidden">
                 <CardContent className="p-5 flex items-center gap-4">
                   <div className="w-12 h-12 bg-luxe-gold rounded-luxe-lg flex items-center justify-center flex-shrink-0">
-                    <img src="/assets/images/Contact-Us-Phone.svg" alt="phone" />
+                    <img src={getMediaUrl("/assets/images/Contact-Us-Phone.svg")} alt="phone" />
                   </div>
                   <div>
                     <h3 className="luxe-heading-3 text-luxe-gray-dark mb-2">Phone Number</h3>
@@ -154,7 +155,7 @@ const Contact = () => {
               <Card className="bg-luxe-gold xl:max-h-[91px] max-h-fit border-0 rounded-luxe-lg overflow-hidden">
                 <CardContent className="p-5 flex items-center gap-4">
                   <div className="w-12 h-12 bg-white rounded-luxe-lg flex items-center justify-center flex-shrink-0">
-                    <img src="/assets/images/Contact-Us-Envelope.svg" alt="email" />
+                    <img src={getMediaUrl("/assets/images/Contact-Us-Envelope.svg")} alt="email" />
                   </div>
                   <div>
                     <h3 className="luxe-heading-3 text-luxe-gray-light mb-2">Email Address</h3>
@@ -167,7 +168,7 @@ const Contact = () => {
               <Card className="border xl:max-h-[91px] max-h-fit border-gray-200 rounded-luxe-lg overflow-hidden">
                 <CardContent className="p-5 flex items-center gap-4">
                   <div className="w-12 h-12 bg-luxe-gold rounded-luxe-lg flex items-center justify-center flex-shrink-0">
-                    <img src="/assets/images/Contact-Us-Location.svg" alt="phone" />
+                    <img src={getMediaUrl("/assets/images/Contact-Us-Location.svg")} alt="phone" />
                   </div>
                   <div>
                     <h3 className="luxe-heading-3 text-luxe-gray-dark mb-2">Company Address</h3>

@@ -1,10 +1,11 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { getMediaUrl } from "@/lib/utils";
 
 const ExcursionBanner = () => (
   <section className="py-20 text-white relative bg-cover bg-center mx-5 lg:mx-[60px] mt-24 rounded-[20px]" style={{
-    backgroundImage: "url('/assets/images/our-excursion-image.png')"
+    backgroundImage: `url('${getMediaUrl("/assets/images/our-excursion-image.png")}')`
   }}>
     <div className="absolute inset-0 bg-black/50 rounded-[20px]"></div>
     <div className="relative z-10 xl:max-w-7xl max-w-auto mx-auto text-center lg:px-[60px] px-10">

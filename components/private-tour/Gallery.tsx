@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Play, Pause, Volume2, VolumeX, Maximize } from 'lucide-react';
+import { getMediaUrl } from "@/lib/utils";
 
 const Gallery = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -71,19 +72,19 @@ const Gallery = () => {
   // Gallery images
   const images = [
     {
-      src: "/assets/images/Gallery-img2.jpg",
+      src: getMediaUrl("/assets/images/Gallery-img2.jpg"),
       alt: "Fireworks"
     },
     {
-      src: "/assets/images/Gallery-img3.jpg",
+      src: getMediaUrl("/assets/images/Gallery-img3.jpg"),
       alt: "Concert"
     },
     {
-      src: "/assets/images/Gallery-img4.jpg",
+      src: getMediaUrl("/assets/images/Gallery-img4.jpg"),
       alt: "Food"
     },
     {
-      src: "/assets/images/Gallery-img5.jpg",
+      src: getMediaUrl("/assets/images/Gallery-img5.jpg"),
       alt: "Carnival ride"
     }
   ];
@@ -101,7 +102,7 @@ const Gallery = () => {
               ref={videoRef}
               className="w-full h-full object-cover"
               onEnded={handleVideoEnded}
-              poster="/assets/images/Gallery-img1.jpg"
+              poster={getMediaUrl("/assets/images/Gallery-img1.jpg")}
             >
               <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
               Your browser does not support the video tag.
