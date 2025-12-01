@@ -6,12 +6,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getMediaUrl } from '@/lib/utils';
 
-interface NavbarProps {
-  theme?: 'light' | 'dark';
-  backgroundColor: 'dark' | '';
-}
-
-const Navbar = ({ theme = 'dark', backgroundColor }: NavbarProps) => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
@@ -24,13 +19,8 @@ const Navbar = ({ theme = 'dark', backgroundColor }: NavbarProps) => {
 
   const isActive = (path: string) => pathname === path;
 
-  // Color logic based on theme prop
-  const textColor = theme === 'light' ? "text-luxe-gray-dark" : "text-white";
-  const hoverColor = theme === 'light' ? "hover:text-luxe-gold" : "hover:text-luxe-gold";
-  const activeColor = theme === 'light' ? "text-luxe-gold" : "text-luxe-gold";
-
   return (
-    <nav className={`fixed backdrop-blur-md top-0 left-0 w-full z-[100] ${theme === 'dark' ? 'text-white' : 'text-luxe-gray-dark'} ${backgroundColor === 'dark' ? 'bg-luxe-black': 'bg-white/10' }`}>
+    <nav className="fixed top-0 left-0 w-full z-[100] bg-luxe-black text-white">
       <div className="mx-auto container-padding">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -46,8 +36,10 @@ const Navbar = ({ theme = 'dark', backgroundColor }: NavbarProps) => {
               <Link
                 key={item.name}
                 href={item.path}
-                className={`font-medium transition-colors ${hoverColor} ${
-                  isActive(item.path) ? activeColor : textColor
+                className={`font-medium transition-colors ${
+                  isActive(item.path)
+                    ? "text-luxe-gold"
+                    : "text-white hover:text-luxe-gold"
                 }`}
               >
                 {item.name}
@@ -61,7 +53,7 @@ const Navbar = ({ theme = 'dark', backgroundColor }: NavbarProps) => {
               variant="ghost"
               size="sm"
               onClick={() => setIsOpen(!isOpen)}
-              className={`${textColor} ${hoverColor}`}
+                className="text-white hover:text-luxe-gold"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -76,8 +68,10 @@ const Navbar = ({ theme = 'dark', backgroundColor }: NavbarProps) => {
                 <Link
                   key={item.name}
                   href={item.path}
-                  className={`block px-3 py-2 text-white text-base font-medium transition-colors hover:text-amber-600 ${
-                    isActive(item.path) ? "text-amber-600" : textColor
+                  className={`block px-3 py-2 text-base font-medium transition-colors ${
+                    isActive(item.path)
+                      ? "text-luxe-gold"
+                      : "text-white hover:text-luxe-gold"
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
