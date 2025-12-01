@@ -284,6 +284,7 @@ const OfferingCard = ({ item, type }: { item: any; type: 'activity' | 'event' | 
             {/* Desktop Video (16:9) */}
             <video
               autoPlay
+              preload="metadata"
               loop
               muted
               playsInline
@@ -295,6 +296,7 @@ const OfferingCard = ({ item, type }: { item: any; type: 'activity' | 'event' | 
             {/* Mobile Video (9:16) */}
             <video
               autoPlay
+              preload="metadata"
               loop
               muted
               playsInline
