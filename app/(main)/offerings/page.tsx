@@ -359,11 +359,7 @@ const OfferingCard = ({ item, type }: { item: any; type: 'activity' | 'event' | 
                   View Details
                 </Button>
               </Link>
-            ) : (
-              <Button variant="luxe" className="text-xs px-4 py-2 h-9 shrink-0">
-                Inquire Now
-              </Button>
-            )}
+            ) : null}
           </div>
         </div>
       </div>
@@ -374,38 +370,16 @@ const OfferingCard = ({ item, type }: { item: any; type: 'activity' | 'event' | 
 export default function OfferingsPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section with Video */}
-      <section className="w-full container-padding mt-20">
-        <div className="relative h-[320px] md:h-[420px] rounded-luxe-xl overflow-hidden">
-          {/* Desktop Video (16:9) */}
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="hidden md:block absolute inset-0 w-full h-full object-cover"
-            poster={getMediaUrl("/assets/images/Excursion-Hero-Img.png")}
-          >
-            <source src={getMediaUrl("/assets/videos/Beauty of Tenerife 16-9 - Final Video.mp4")} type="video/mp4" />
-          </video>
-          {/* Mobile Video (9:16) */}
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="md:hidden absolute inset-0 w-full h-full object-cover"
-            poster={getMediaUrl("/assets/images/Excursion-Hero-Img.png")}
-          >
-            <source src={getMediaUrl("/assets/videos/Beauty of Tenerife 9-16 - Final Video.mp4")} type="video/mp4" />
-          </video>
-          <div className="absolute inset-0 bg-black/40"></div>
-          <div className="relative z-10 flex flex-col items-center gap-4 max-w-[1160px] w-full mx-auto h-full justify-center px-4">
-            <h1 className="luxe-heading-display text-white uppercase text-center">
+      {/* Hero Section - Solid Luxe Black (matches Experiences page style) */}
+      <section className="relative w-full bg-luxe-black h-screen overflow-hidden pt-24">
+        <div className="max-w-7xl mx-auto container-padding h-full flex items-center justify-center">
+          <div className="flex flex-col items-center text-center gap-4">
+            <h1 className="luxe-heading-display text-white uppercase">
               Activities, Events & Rentals
             </h1>
-            <p className="luxe-text-body-large text-gray-100 text-center max-w-6xl">
-              Discover thrilling activities, unforgettable events, and premium rentals to build your perfect Luxe Experience.
+            <p className="luxe-text-body-large text-gray-200 max-w-3xl">
+              Discover thrilling activities, unforgettable events, and premium rentals to build your perfect Luxe
+              Experience.
             </p>
           </div>
         </div>
